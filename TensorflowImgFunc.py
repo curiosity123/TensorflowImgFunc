@@ -61,7 +61,7 @@ with tf.name_scope('loss'):
     loss = tf.Print(loss, [loss], "loss")
 
 with tf.name_scope('trainer'):
-    train_op = tf.train.GradientDescentOptimizer(0.7).minimize(loss)
+    train_op = tf.train.GradientDescentOptimizer(0.1).minimize(loss)
 
 init = tf.global_variables_initializer()
 
